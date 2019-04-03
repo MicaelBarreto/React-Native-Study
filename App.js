@@ -1,14 +1,17 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import Simples from './src/components/Simple';
+import Simple from './src/components/Simple';
 import EvenOdd from './src/components/EvenOdd';
+import { Reverse, Random } from './src/components/Multi';
 
 export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Simples text = 'The Number is'/>
+        <Simple text = 'The Number is'/>
         <EvenOdd number={30} />
+        <Reverse text='React' />
+        <Random numbers={5} />
       </View>
     );
   }
