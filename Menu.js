@@ -1,13 +1,26 @@
 import React from 'react';
-import { createStackNavigator, createDrawerNavigator, createAppContainer } from 'react-navigation';
+import { createDrawerNavigator, createAppContainer } from 'react-navigation';
 
 import Simple from './src/components/Simple';
 import EvenOdd from './src/components/EvenOdd';
 import { Reverse, Random } from './src/components/Multi';
 import Counter from './src/components/Counter';
 import Platforms from './src/components/Platforms';
+import PropsValidate from './src/components/PropsValidate';
+import Event from './src/components/Event';
+import Grandfather from './src/components/DirectCom';
+
 
 const RootStack = createDrawerNavigator({
+    Grandfather: {
+        screen: () => <Grandfather name='John' surname='Charlander'/>
+    },
+    Event : {
+        screen: () => <Event />
+    },
+    PropsValidate: {
+        screen: () => <PropsValidate year={19} />
+    },
     Platforms: {
         screen: () => <Platforms />
     },
