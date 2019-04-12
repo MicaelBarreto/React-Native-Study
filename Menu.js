@@ -9,9 +9,21 @@ import Platforms from './src/components/Platforms';
 import PropsValidate from './src/components/PropsValidate';
 import Event from './src/components/Event';
 import Grandfather from './src/components/DirectCom';
+import IndirectCom from './src/components/IndirectCom';
+import List from './src/components/List';
+import Flex from './src/components/Flex';
 
 
 const RootStack = createDrawerNavigator({
+    Flex: {
+        screen: () => <Flex />
+    },
+    List: {
+        screen: () => <List />
+    },
+    IndirectCom: {
+        screen: () => <IndirectCom />
+    },
     Grandfather: {
         screen: () => <Grandfather name='John' surname='Charlander'/>
     },
